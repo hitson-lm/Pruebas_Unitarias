@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: packge.application.CalculadoraTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.103 sec <<< FAILURE! - in packge.application.CalculadoraTest
+testSuma  Time elapsed: 0.091 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <15.0> but was: <11.0>
+	at packge.application.CalculadoraTest.testSuma(CalculadoraTest.java:16)
+
