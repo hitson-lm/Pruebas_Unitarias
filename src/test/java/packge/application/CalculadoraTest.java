@@ -1,21 +1,32 @@
 package packge.application;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CalculadoraTest {
+
+    //variable global
+    Calculadora calculadora;
+
+    //creamos un metodo que inicialiace la instancia.
+    @BeforeEach     // Anotacion para que se ejecute antes de cada TEST
+    public void init(){
+        calculadora=new Calculadora();
+    }
+
     @Test
     public void testSuma(){
-        // resultado esperado
-        double resultEsperado=15;
+        Assertions.assertEquals(15,calculadora.sumar(10,5));
+    }
 
-        //Resultado obtenido en ejecucion
-        Calculadora calculadora = new Calculadora();
-        double obtenido=calculadora.sumar(5,10);
+    @Test
+    public void testResta(){
+        Assertions.assertEquals(5,calculadora.restar(10,5));
+    }
 
-        //comparar Esperado vs Obtenido
-        Assertions.assertEquals(resultEsperado,obtenido);
-
-
+    @Test
+    public void testMultiplicaion(){
+        Assertions.assertEquals(25,calculadora.multiplicar(5,5));
     }
 
 }
